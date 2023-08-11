@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Générateur d'Embed Discord</title>
+</head>
+<body>
+    <form>
+        <label for="titre">Titre :</label>
+        <input type="text" id="titre" name="titre"><br><br>
+
+        <label for="texte">Texte :</label>
+        <input type="text" id="texte" name="texte"><br><br>
+
+        <label for="petitTitre">Petit Titre :</label>
+        <input type="text" id="petitTitre" name="petitTitre"><br><br>
+
+        <input type="button" value="Générer l'Embed" onclick="genererEmbed()"><br><br>
+
+        <textarea id="embedCode" rows="10" cols="50" readonly></textarea>
+    </form>
+
+    <script>
+        function genererEmbed() {
+            var titre = document.getElementById('titre').value;
+            var texte = document.getElementById('texte').value;
+            var petitTitre = document.getElementById('petitTitre').value;
+
+            titre = titre.replace(/ /g, '+');
+            texte = texte.replace(/ /g, '+');
+            petitTitre = petitTitre.replace(/ /g, '+');
+
+            var embedURL = `||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||https://ethone.cc/utility/api/embed?title=${titre}&description=${texte}%0A%0A${petitTitre}&image=https://cdn.discordapp.com/attachments/1118076831418028082/1118076958132150302/28700825.png&color=5865F2&lastused=freakiScriptEmbedGen&ethone`;
+
+            document.getElementById('embedCode').value = embedURL;
+        }
+    </script>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</body>
+</html>
