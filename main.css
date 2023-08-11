@@ -1,0 +1,65 @@
+/* Réinitialisation des marges et des paddings */
+body, h1, form, label, input, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Pour inclure les bordures et le padding dans la largeur/hauteur */
+}
+
+/* Styling de base pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Styling pour le formulaire */
+form {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+/* Styling pour les étiquettes du formulaire */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: left;
+}
+
+/* Styling pour les champs de texte du formulaire */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Styling pour le bouton du formulaire */
+input[type="button"] {
+    background-color: #5865F2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background-color: #4853d2;
+}
